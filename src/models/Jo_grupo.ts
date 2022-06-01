@@ -1,40 +1,26 @@
 import { Model, DataType, DataTypes } from 'sequelize';
 import { database } from '../database/db';
 
-export class Cliente extends Model {
+export class Jo_grupo extends Model {
     public nombre!: string;
-    public correo!: string;
-    public telefono!: string;
-    public direccion!: string;
+    public salon!: string;
     public activo!: Boolean;
 }
 
-export interface ClienteI {
+export interface Jo_grupoI {
     nombre: string;
-    correo: string;
-    telefono: string;
-    direccion: string;
+    salon: string;
     activo: Boolean;
 }
 
-Cliente.init(
+Jo_grupo.init(
     {
         nombre: {
             type: DataTypes.STRING,
             allowNull: false
         },
 
-        correo: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-
-        telefono: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-
-        direccion: {
+        salon: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -45,8 +31,8 @@ Cliente.init(
         }
     },
     {
-        tableName: 'clientes',
+        tableName: 'grupos',
         sequelize: database,
-        timestamps: true
+        timestamps: false
     }
 )

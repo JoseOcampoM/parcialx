@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 
-const DB_NAME = 'db_parcial';
+const DB_NAME = 'jo_examen';
 
 const DB_USER = 'root';
 
@@ -19,7 +19,7 @@ export const database = new Sequelize(
 );
 
 
-database.sync({force: false})
+database.sync({force: true})
     .then(function () {
         console.log('Base de datos creada correctamente...');
     });

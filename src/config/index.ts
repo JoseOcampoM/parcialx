@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import morgan from 'morgan';
 import { Routes } from '../routes';
+var cors = require('cors')
 
 export class App {
     app: Application;
@@ -27,11 +28,12 @@ export class App {
         this.app.use(morgan('dev'));
         this.app.use(express.json());
         this.app.use(express.urlencoded({extended: false}));
+        this.app.use(cors());
     }
 
     Routes() {
-        this.routePrv.clienteRoutes.routes(this.app)
-        this.routePrv.servicioRoutes.routes(this.app)
+        this.routePrv.jo_grupoRoutes.routes(this.app)
+        this.routePrv.jo_alumnoRoutes.routes(this.app)
     }
 
 }

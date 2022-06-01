@@ -1,8 +1,8 @@
-import { ClienteRoutes } from "./cliente";
-import { ServicioRoutes } from "./servicio";
+import { Jo_grupoRoutes } from "./jo_grupos";
+import { Jo_alumnoRoutes } from "./jo_alumnos";
 
 
 export class Routes {
-    public clienteRoutes: ClienteRoutes = new ClienteRoutes();
-    public servicioRoutes: ServicioRoutes = new ServicioRoutes();
+    public jo_grupoRoutes: Jo_grupoRoutes = new Jo_grupoRoutes();
+    public jo_alumnoRoutes: Jo_alumnoRoutes = new Jo_alumnoRoutes();
 }
